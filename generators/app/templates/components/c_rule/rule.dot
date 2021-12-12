@@ -1,0 +1,10 @@
+<div class="rule-content">
+  {{~ it.$config.rules :value}}
+  <dl class="ui-mb-20">
+    <dt class="ui-text-strong ui-mb-10">{{=value.title}}</dt>
+    {{~ value.items :item}}
+    <dd class="sub-desc">{{=item.text}}</dd>
+    {{~}}
+  </dl>
+  {{~}}
+</div>

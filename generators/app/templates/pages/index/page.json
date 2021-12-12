@@ -1,0 +1,24 @@
+{
+  "title": "示例项目",
+  "styles": {
+    "backgroundColor": "#febe2c"
+  },
+  "components": [
+    {
+      "uid": "c_header_1",
+      "name": "c_header"
+    },
+    {
+      "uid": "c_rule_1",
+      "name": "c_rule"
+    },
+    {
+      "uid": "c_list_1",
+      "name": "c_list"
+    },
+    {
+      "uid": "c_footer_1",
+      "name": "c_footer"
+    }
+  ]
+}

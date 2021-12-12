@@ -1,0 +1,38 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mock": "concurrently --raw --kill-others \"npm run dev:mock\" \"npm run serve\"",
+    "dev": "concurrently --raw --kill-others \"npm run dev:watch\" \"npm run serve\"",
+    "serve": "cross-env SERVER_ENV=local jfet server -l -s",
+    "serve:build": "cross-env SERVER_ENV=build jfet server -s -c ../../release",
+    "dev:watch": "cross-env BUILD_ENV=local jfet build -w",
+    "dev:mock": "cross-env BUILD_ENV=mock jfet build -w",
+    "build:test": "cross-env BUILD_ENV=test jfet build",
+    "build:prod": "cross-env BUILD_ENV=prod jfet build",
+    "image": "jfet image --min",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yourong.chen@jyblife.com",
+  "license": "ISC",
+  "dependencies": {
+    "@jyb/boxes": "^0.6.0",
+    "@jyb/boxes-view-vue": "^0.1.0",
+    "@jyb/common-sass": "^1.0.0",
+    "@jyb/lib-bimta": "^1.0.4",
+    "@jyb/lib-detect": "^1.1.1",
+    "@jyb/lib-dialog": "^1.0.9",
+    "@jyb/lib-extend": "^0.1.9",
+    "@jyb/lib-fastclick": "^1.1.17",
+    "@jyb/lib-open-install": "^1.0.4",
+    "@jyb/lib-request": "^1.2.11",
+    "@jyb/lib-tips": "^0.1.9",
+    "@jyb/lib-tracker": "^1.0.3",
+    "@jyb/lib-util": "^0.1.17",
+    "qs": "^6.5.1",
+    "vue": "^2.6.10"
+  }
+}

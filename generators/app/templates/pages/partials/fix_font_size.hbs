@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  (function(doc, win) {
+    var basicWidth = window.basicWidth || 750;
+    var minWidth = 320;
+    var htmlElement = doc.documentElement;
+    var dpr = parseInt(window.devicePixelRatio || 1, 10);
+    var recalc = function() {
+        var clientWidth = htmlElement.clientWidth || (basicWidth / 2);
+        window.rootFontSize = 100 * (clientWidth / basicWidth);
+        clientWidth = clientWidth < minWidth? minWidth : clientWidth;
+        htmlElement.style.fontSize = 100 * (clientWidth / basicWidth) + 'px';
+        htmlElement.setAttribute("data-dpi", dpr);
+    };
+    recalc();
+    if (!win.addEventListener) return;
+    win.addEventListener('resize', recalc, false);
+  })(document, window);
+</script>
